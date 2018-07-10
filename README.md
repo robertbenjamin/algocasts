@@ -5,9 +5,10 @@ Forked from [this repo](https://github.com/StephenGrider/AlgoCasts) and followin
 ## Setup
 Make sure you're using the latest version of Node.
 
-```javascript
+```bash
 npm i -g jest
 
-// Run tests for the reversestring exercise
+# Run tests for the reversestring exercise
+cd exercises
 jest reversestring/test.js --watch
 ```
