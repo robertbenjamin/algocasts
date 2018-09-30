@@ -22,7 +22,7 @@ class LinkedList {
     let counter = 0;
     let node = this.head;
 
-    while (node) {
+    while(node) {
       counter++;
       node = node.next;
     }
@@ -32,6 +32,20 @@ class LinkedList {
 
   getFirst() {
     return this.head;
+  }
+
+  getLast() {
+    let counter = 0;
+    let node = this.head;
+    let prevNode = null;
+
+    while(node) {
+      counter++;
+      prevNode = node;
+      node = node.next;
+    }
+
+    return prevNode;
   }
 }
 
