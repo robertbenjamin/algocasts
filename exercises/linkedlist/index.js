@@ -95,16 +95,16 @@ class LinkedList {
   }
 
   removeAt(index) {
-    if (!this.head) return null;
-
-    const previous = this.getAt(index - 1);
-    const next = this.getAt(index + 1);
+    if (!this.head) return;
 
     if (index === 0) {
-      this.head = next;
+      this.head = this.head.next;
       return;
     }
 
+    const previous = this.getAt(index - 1);
+    if (!previous || !previous.next) return;
+    const next = previous.next.next;
     previous.next = next;
   }
 }
