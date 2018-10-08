@@ -98,21 +98,21 @@ describe('RemoveFirst', () => {
 });
 
 describe('RemoveLast', () => {
-  test('RemoveLast removes the last node when list is empty', () => {
+  test('removes the last node when list is empty', () => {
     const l = new List();
     expect(() => {
       l.removeLast();
     }).not.toThrow();
   });
 
-  test('RemoveLast removes the last node when list is length 1', () => {
+  test('removes the last node when list is length 1', () => {
     const l = new List();
     l.insertFirst('a');
     l.removeLast();
     expect(l.head).toEqual(null);
   });
 
-  test('RemoveLast removes the last node when list is length 2', () => {
+  test('removes the last node when list is length 2', () => {
     const l = new List();
     l.insertFirst('b');
     l.insertFirst('a');
@@ -123,7 +123,7 @@ describe('RemoveLast', () => {
     expect(l.head.data).toEqual('a');
   });
 
-  test('RemoveLast removes the last node when list is length 3', () => {
+  test('removes the last node when list is length 3', () => {
     const l = new List();
     l.insertFirst('c');
     l.insertFirst('b');
@@ -165,7 +165,7 @@ describe('GetAt', () => {
 });
 
 describe('RemoveAt', () => {
-  test('removeAt doesnt crash on an empty list', () => {
+  test(`doesn't crash on an empty list`, () => {
     const l = new List();
     expect(() => {
       l.removeAt(0);
@@ -174,7 +174,7 @@ describe('RemoveAt', () => {
     }).not.toThrow();
   });
 
-  test('removeAt doesnt crash on an index out of bounds', () => {
+  test(`doesn't crash on an index out of bounds`, () => {
     const l = new List();
     expect(() => {
       const l = new List();
@@ -183,7 +183,7 @@ describe('RemoveAt', () => {
     }).not.toThrow();
   });
 
-  test('removeAt deletes the first node', () => {
+  test('deletes the first node', () => {
     const l = new List();
     l.insertLast(1);
     l.insertLast(2);
@@ -194,7 +194,7 @@ describe('RemoveAt', () => {
     expect(l.getAt(0).data).toEqual(2);
   });
 
-  test('removeAt deletes the node at the given index', () => {
+  test('deletes the node at the given index', () => {
     const l = new List();
     l.insertLast(1);
     l.insertLast(2);
@@ -205,7 +205,7 @@ describe('RemoveAt', () => {
     expect(l.getAt(1).data).toEqual(3);
   });
 
-  test('removeAt works on the last node', () => {
+  test('works on the last node', () => {
     const l = new List();
     l.insertLast(1);
     l.insertLast(2);
